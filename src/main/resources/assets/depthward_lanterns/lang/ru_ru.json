@@ -1,0 +1,23 @@
+{
+  "item.depthward_lanterns.oil": "Масло для фонаря",
+  "block.depthward_lanterns.oil_lantern": "Масляный фонарь",
+  "attribute.depthward_lanterns.fuel_efficiency": "Экономия топлива фонаря",
+  "tooltip.depthward_lanterns.on": "Фонарь: включён",
+  "tooltip.depthward_lanterns.off": "Фонарь: выключен",
+  "message.depthward_lanterns.full": "Недостаточно места в инвентаре",
+  "message.depthward_lanterns.no_lantern": "Нет фонаря в руках или Curios",
+  "key.depthward_lanterns.toggle": "Включить/выключить фонари в руках и Curios",
+  "key.categories.depthward_lanterns": "Фонарь DepthWard",
+  "tooltip.depthward_lanterns.state": "Состояние:",
+  "tooltip.depthward_lanterns.enabled": "Включен",
+  "tooltip.depthward_lanterns.disabled": "Выключен",
+  "item.depthward_lanterns.infernal_lens": "Адская линза",
+  "tooltip.depthward_lanterns.upgraded": "Улучшен",
+  "effect.depthward_lanterns.shrouded_in_darkness": "Окутан тьмой",
+  "effect.depthward_lanterns.hellfire": "Адский огонь",
+  "subtitles.depthward_lanterns.darkness_whisper": "Шёпот во тьме",
+  "death.attack.depthward_lanterns.shrouded_in_darkness": "%1$s был поглощён тьмой",
+  "death.attack.depthward_lanterns.shrouded_in_darkness.player": "%1$s был поглощён тьмой, спасаясь от %2$s",
+  "death.attack.depthward_lanterns.hellfire": "%1$s был поглощён адским огнём",
+  "death.attack.depthward_lanterns.hellfire.player": "%1$s был поглощён адским огнём, спасаясь от %2$s"
+}

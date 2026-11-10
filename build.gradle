@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'net.minecraftforge.gradle' version '6.0.54'
+}
+group = 'dev.depthward'
+version = '1.2.3'
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+sourceSets {
+
+    gameTest {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath += sourceSets.main.output + sourceSets.main.runtimeClasspath
+    }
+}
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    runs {
+        configureEach {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+        }
+
+        gameTestServer {
+            workingDirectory project.file('run-gametest')
+            property 'forge.enabledGameTestNamespaces', 'depthward_lanterns'
+            mods { depthward_lanterns { source sourceSets.main; source sourceSets.gameTest } }
+        }
+    }
+}
+repositories { mavenCentral(); flatDir { dirs '../mods' } }
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.28'
+    implementation fg.deobf('local:curios:forge-5.14.1+1.20.1')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+}
+tasks.named('processResources') { from('ASSETS.md') }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+test { useJUnitPlatform() }
+jar { finalizedBy 'reobfJar' }
+
+tasks.named('processResources') { from('LICENSE') }

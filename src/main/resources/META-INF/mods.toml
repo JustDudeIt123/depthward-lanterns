@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+[[mods]]
+logoFile="logo.png"
+modId="depthward_lanterns"
+version="1.2.3"
+displayName="DepthWard Oil Lanterns"
+authors="justthekingg"
+description="Refillable oil lanterns with Curios belt rendering ; extended dynamic light supplied by Depthward Mod Compat."
+[[dependencies.depthward_lanterns]]
+modId="forge"
+mandatory=true
+versionRange="[47.4.4,48)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.depthward_lanterns]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1]"
+ordering="NONE"
+side="BOTH"
+[[dependencies.depthward_lanterns]]
+modId="curios"
+mandatory=true
+versionRange="[5.14.1,6)"
+ordering="AFTER"
+side="BOTH"

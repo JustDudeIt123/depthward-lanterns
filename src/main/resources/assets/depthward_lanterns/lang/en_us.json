@@ -1,0 +1,23 @@
+{
+  "item.depthward_lanterns.oil": "Lantern Oil",
+  "block.depthward_lanterns.oil_lantern": "Oil Lantern",
+  "attribute.depthward_lanterns.fuel_efficiency": "Lantern Fuel Efficiency",
+  "tooltip.depthward_lanterns.on": "Lantern: enabled",
+  "tooltip.depthward_lanterns.off": "Lantern: disabled",
+  "message.depthward_lanterns.full": "Inventory is full",
+  "message.depthward_lanterns.no_lantern": "No lantern in hands or Curios",
+  "key.depthward_lanterns.toggle": "Toggle lanterns in hands and Curios",
+  "key.categories.depthward_lanterns": "DepthWard Lantern",
+  "tooltip.depthward_lanterns.state": "State:",
+  "tooltip.depthward_lanterns.enabled": "Enabled",
+  "tooltip.depthward_lanterns.disabled": "Disabled",
+  "item.depthward_lanterns.infernal_lens": "Infernal Lens",
+  "tooltip.depthward_lanterns.upgraded": "Upgraded",
+  "effect.depthward_lanterns.shrouded_in_darkness": "Shrouded in Darkness",
+  "effect.depthward_lanterns.hellfire": "Hellfire",
+  "subtitles.depthward_lanterns.darkness_whisper": "Whispers in the dark",
+  "death.attack.depthward_lanterns.shrouded_in_darkness": "%1$s was consumed by darkness",
+  "death.attack.depthward_lanterns.shrouded_in_darkness.player": "%1$s was consumed by darkness while escaping %2$s",
+  "death.attack.depthward_lanterns.hellfire": "%1$s was consumed by hellfire",
+  "death.attack.depthward_lanterns.hellfire.player": "%1$s was consumed by hellfire while escaping %2$s"
+}

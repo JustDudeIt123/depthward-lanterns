@@ -1,0 +1,11 @@
+{
+  "darkness_whisper": {
+    "subtitle": "subtitles.depthward_lanterns.darkness_whisper",
+    "sounds": [
+      {
+        "name": "depthward_lanterns:darkness_whisper",
+        "volume": 0.9
+      }
+    ]
+  }
+}

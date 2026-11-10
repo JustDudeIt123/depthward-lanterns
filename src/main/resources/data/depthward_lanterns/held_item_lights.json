@@ -1,0 +1,239 @@
+{
+  "adorn:black_table_lamp": {
+    "item": "adorn:black_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:blue_table_lamp": {
+    "item": "adorn:blue_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:brown_table_lamp": {
+    "item": "adorn:brown_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:cyan_table_lamp": {
+    "item": "adorn:cyan_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:gray_table_lamp": {
+    "item": "adorn:gray_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:green_table_lamp": {
+    "item": "adorn:green_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:light_blue_table_lamp": {
+    "item": "adorn:light_blue_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:light_gray_table_lamp": {
+    "item": "adorn:light_gray_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:lime_table_lamp": {
+    "item": "adorn:lime_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:magenta_table_lamp": {
+    "item": "adorn:magenta_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:orange_table_lamp": {
+    "item": "adorn:orange_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:pink_table_lamp": {
+    "item": "adorn:pink_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:purple_table_lamp": {
+    "item": "adorn:purple_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:red_table_lamp": {
+    "item": "adorn:red_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:stone_torch": {
+    "item": "adorn:stone_torch",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:white_table_lamp": {
+    "item": "adorn:white_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "adorn:yellow_table_lamp": {
+    "item": "adorn:yellow_table_lamp",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "minecraft:blaze_powder": {
+    "item": "minecraft:blaze_powder",
+    "luminance": 10
+  },
+  "minecraft:blaze_rod": {
+    "item": "minecraft:blaze_rod",
+    "luminance": 10
+  },
+  "minecraft:campfire": {
+    "item": "minecraft:campfire",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "minecraft:fire_charge": {
+    "item": "minecraft:fire_charge",
+    "luminance": 10,
+    "water_sensitive": true
+  },
+  "minecraft:glow_berries": {
+    "item": "minecraft:glow_berries",
+    "luminance": 14
+  },
+  "minecraft:glow_ink_sac": {
+    "item": "minecraft:glow_ink_sac",
+    "luminance": 12
+  },
+  "minecraft:glowstone_dust": {
+    "item": "minecraft:glowstone_dust",
+    "luminance": 8
+  },
+  "minecraft:lava_bucket": {
+    "item": "minecraft:lava_bucket",
+    "luminance": "minecraft:lava",
+    "water_sensitive": true
+  },
+  "minecraft:nether_star": {
+    "item": "minecraft:nether_star",
+    "luminance": 8
+  },
+  "minecraft:prismarine_crystals": {
+    "item": "minecraft:prismarine_crystals",
+    "luminance": 8
+  },
+  "minecraft:redstone_torch": {
+    "item": "minecraft:redstone_torch",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "minecraft:soul_campfire": {
+    "item": "minecraft:soul_campfire",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "minecraft:soul_torch": {
+    "item": "minecraft:soul_torch",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "minecraft:spectral_arrow": {
+    "item": "minecraft:spectral_arrow",
+    "luminance": 10
+  },
+  "minecraft:torch": {
+    "item": "minecraft:torch",
+    "luminance": "block",
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder": {
+    "item": "supplementaries:candle_holder",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_black": {
+    "item": "supplementaries:candle_holder_black",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_blue": {
+    "item": "supplementaries:candle_holder_blue",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_brown": {
+    "item": "supplementaries:candle_holder_brown",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_cyan": {
+    "item": "supplementaries:candle_holder_cyan",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_gray": {
+    "item": "supplementaries:candle_holder_gray",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_green": {
+    "item": "supplementaries:candle_holder_green",
+    "luminance": 8,
+    "water_sensitive": false
+  },
+  "supplementaries:candle_holder_light_blue": {
+    "item": "supplementaries:candle_holder_light_blue",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_light_gray": {
+    "item": "supplementaries:candle_holder_light_gray",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_lime": {
+    "item": "supplementaries:candle_holder_lime",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_magenta": {
+    "item": "supplementaries:candle_holder_magenta",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_orange": {
+    "item": "supplementaries:candle_holder_orange",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_pink": {
+    "item": "supplementaries:candle_holder_pink",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_purple": {
+    "item": "supplementaries:candle_holder_purple",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_red": {
+    "item": "supplementaries:candle_holder_red",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_white": {
+    "item": "supplementaries:candle_holder_white",
+    "luminance": 8,
+    "water_sensitive": true
+  },
+  "supplementaries:candle_holder_yellow": {
+    "item": "supplementaries:candle_holder_yellow",
+    "luminance": 8,
+    "water_sensitive": true
+  }
+}

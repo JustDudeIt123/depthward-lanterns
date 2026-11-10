@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "hanging=false,lit=false": {
+      "model": "depthward_lanterns:block/unlit_lantern"
+    },
+    "hanging=false,lit=true": {
+      "model": "depthward_lanterns:block/lit_lantern"
+    },
+    "hanging=true,lit=false": {
+      "model": "depthward_lanterns:block/unlit_lantern_hanging"
+    },
+    "hanging=true,lit=true": {
+      "model": "depthward_lanterns:block/lit_lantern_hanging"
+    }
+  }
+}

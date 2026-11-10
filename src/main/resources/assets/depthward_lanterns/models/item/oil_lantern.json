@@ -1,0 +1,11 @@
+{
+  "parent": "depthward_lanterns:block/lit_lantern",
+  "overrides": [
+    {
+      "predicate": {
+        "depthward_lanterns:empty": 1
+      },
+      "model": "depthward_lanterns:item/empty_lantern"
+    }
+  ]
+}

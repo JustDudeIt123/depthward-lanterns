@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "depthward_lanterns:item/infernal_lens"
+  }
+}
