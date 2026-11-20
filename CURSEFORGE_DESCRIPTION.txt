@@ -1,0 +1,17 @@
+DepthWard Oil Lanterns adds refillable oil lanterns for exploration and survival.
+
+Carry a lantern in either hand, equip it in the Curios belt slot, or place it on the ground or hang it from a ceiling. Fuel is retained when placing or breaking a lantern. Refill it with oil instead of replacing it, and switch carried lanterns on or off with a configurable keybind (R by default).
+
+Carried lanterns provide directional dynamic lighting: a bright 150-degree sector follows your character's body, with a smooth transition to weaker light around the remaining 210 degrees. Placed lanterns illuminate their surroundings in all directions. Light range, underwater range and fuel consumption are configurable.
+
+Includes configurable darkness and Nether hazards, plus an Infernal Lens upgrade for protection against the Nether hazard.
+
+Dynamic lighting is now integrated directly into DepthWard Oil Lanterns through RyoamicLights. DepthWard Mod Compat is no longer required for the lantern's lighting. Your own carried lantern is excluded from lighting your character model to avoid movement-related flickering; other light sources still illuminate it normally.
+
+Requirements:
+- Minecraft 1.20.1, Forge and Java 17.
+- Curios API 5.14.1 or a compatible 5.x version.
+- RyoamicLights 0.2.3+mc1.20.1 and its required dependencies on the client.
+- Install DepthWard Oil Lanterns and Curios on both client and server. RyoamicLights is client-side only.
+
+You can use this mod in any project you like, as long as it stays within the scope of the CurseForge platform.

@@ -3,7 +3,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '6.0.54'
 }
 group = 'dev.depthward'
-version = '1.2.3'
+version = '1.3.3'
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 sourceSets {
 
@@ -27,16 +27,43 @@ minecraft {
         }
     }
 }
-repositories { mavenCentral(); flatDir { dirs '../mods' } }
+repositories { mavenCentral(); maven { url = 'https://maven.minecraftforge.net' }; flatDir { dirs '../mods' } }
 dependencies {
     minecraft 'net.minecraftforge:forge:1.20.1-47.4.28'
     implementation fg.deobf('local:curios:forge-5.14.1+1.20.1')
 
+    compileOnly fg.deobf('local:VIS-RyoamicLights:forge-0.2.3+mc1.20.1')
+    compileOnly 'org.spongepowered:mixin:0.8.5'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
 }
 tasks.named('processResources') { from('ASSETS.md') }
 tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
 test { useJUnitPlatform() }
-jar { finalizedBy 'reobfJar' }
+jar { manifest { attributes 'MixinConfigs': 'depthward_lanterns.mixins.json' }; finalizedBy 'reobfJar' }
 
 tasks.named('processResources') { from('LICENSE') }
+
+// Generate vanilla-target refmaps for normal Gradle builds as well as local hotfixes.
+tasks.register('createMixinSrg') {
+    dependsOn 'createMcpToSrg'
+    inputs.file "${buildDir}/createMcpToSrg/output.tsrg"
+    outputs.file "${buildDir}/mixin/mcp-to-srg.srg"
+    doLast {
+        def output = file("${buildDir}/mixin/mcp-to-srg.srg")
+        output.parentFile.mkdirs()
+        net.minecraftforge.srgutils.IMappingFile.load(file("${buildDir}/createMcpToSrg/output.tsrg"))
+            .write(output.toPath(), net.minecraftforge.srgutils.IMappingFile.Format.SRG, false)
+    }
+}
+compileJava {
+    dependsOn 'createMixinSrg'
+    options.compilerArgs += [
+        "-AreobfSrgFile=${buildDir}/mixin/mcp-to-srg.srg",
+        "-AoutRefMapFile=${buildDir}/classes/java/main/depthward_lanterns.refmap.json",
+        "-AoutSrgFile=${buildDir}/mixin/mixins.srg"
+    ]
+}
+tasks.matching { it.name == 'reobfJar' }.configureEach {
+    extraMappings.from(file("${buildDir}/mixin/mixins.srg"))
+}

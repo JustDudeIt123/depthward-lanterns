@@ -1,0 +1,12 @@
+DepthWard Oil Lanterns 1.3.3
+Changes since 1.2.3:
+
+- Moved dynamic lighting integration into the lantern mod itself. DepthWard Mod Compat is no longer required for dynamic lighting.
+- Added a body-facing bright 150-degree sector with smooth falloff to weaker light around the remaining 210 degrees. Placed lanterns keep their radial lighting.
+- Excluded the owner's carried lantern from lighting their own character model to address movement-related flickering.
+- Updated moving light sources every client tick and added per-section filtering for small accumulated light changes.
+- Updated and simplified the lantern model, refreshed the oil bottle texture, and replaced the darkness whisper sound.
+- Fixed the item colour callback issue that could crash item rendering in an intermediate build.
+
+Dependencies: Curios is required. RyoamicLights 0.2.3+mc1.20.1 and its dependencies are required on the client.
+Light range remains configurable. The 16-block range used by the DepthWard modpack is a pack setting, not the standalone default.

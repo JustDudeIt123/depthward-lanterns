@@ -29,7 +29,11 @@ public final class HazardLights {
         for(var other:level.players()) {
             if(other==player || other.isSpectator() || !other.isAlive())continue;
             int luminance=HeldItemLights.held(other);boolean lamp=carriesLight(other,false);if(!lamp && luminance<=0)continue;
-            if(HazardMath.inLightRadius(point.distanceToSqr(new Vec3(other.getX(),other.getY()+0.8,other.getZ())),(lamp?LanternConfig.radius(false,other.isInWater()):7.75*luminance/15.0)))return true;
+            double dx=point.x-other.getX(),dy=point.y-other.getY()-0.8,dz=point.z-other.getZ();
+            double yaw=Math.toRadians(other.yBodyRot);
+            if(lamp && BeamMath.strength(dx,dy,dz,-Math.sin(yaw),Math.cos(yaw),LanternConfig.radius(false,other.isInWater())*BeamMath.RANGE_MULTIPLIER,true)>0)return true;
+            int ordinary=Math.max(other.getMainHandItem().is(Lanterns.LANTERN.get())?0:HeldItemLights.luminance(other.getMainHandItem(),other.isInWater()),other.getOffhandItem().is(Lanterns.LANTERN.get())?0:HeldItemLights.luminance(other.getOffhandItem(),other.isInWater()));
+            if(HazardMath.inLightRadius(dx*dx+dy*dy+dz*dz,7.75*ordinary/15.0))return true;
         }
         var map=PLACED.get(level);if(map==null)return false;
         var iterator=map.entrySet().iterator();

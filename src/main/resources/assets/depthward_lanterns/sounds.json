@@ -4,7 +4,7 @@
     "sounds": [
       {
         "name": "depthward_lanterns:darkness_whisper",
-        "volume": 0.9
+        "volume": 0.75
       }
     ]
   }

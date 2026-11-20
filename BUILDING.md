@@ -1,33 +1,14 @@
-# Сборка JAR мода
+# Сборка Lanterns 1.3.3
 
-Этот репозиторий содержит исходники отдельного мода, его ресурсы, лицензии
-и файлы сборки JAR. Файлы всей сборки DepthWard сюда не включены.
+Нужен JDK 17. Сборка: `gradlew.bat clean build` в Windows или `sh gradlew clean build` в Linux/macOS. Gradle wrapper, ForgeGradle и development-зависимости загружаются из сети; результат — build/libs.
 
-Используйте Java 17 и `gradlew.bat build` (Windows) либо `sh gradlew build`.
-Gradle wrapper требует доступ к сети. Точные зависимости перечислены в build.gradle.
-Если используется flatDir `../mods`, поместите туда зависимости под ожидаемыми
-именами. Сторонние JAR получайте с CurseForge или Modrinth. Собственные модули
-клонируйте в соседние каталоги; Stamina и Lanterns собираются перед зависимыми
-Ghost Villagers и Compat. Собранные зависимости также нужно поместить в ../mods.
-Boss Scaling поддерживает Maven либо `-PlocalMods=<путь>`.
+Текущий build.gradle использует flatDir ../mods. В соседний с корнем проекта каталог mods поместите:
 
-Исходники соответствуют локальным проектам пакета
-DepthWard-CurseForge-2026-11-10.zip. Ресурсы пяти модулей побайтно сверены с JAR.
-Boss Scaling компилировался локальным инструментом. Остальные четыре JAR
-подготовлены с сохранением прежнего байткода и refmap; полная Gradle-пересборка
-и соответствие полученного байткода этим исходникам пока не подтверждены.
-Игровые и GameTest прогоны новых релизов не выполнялись.
-Исторические проверки в README не подтверждают проверку этого релиза.
+- curios-forge-5.14.1+1.20.1.jar
+- VIS-RyoamicLights-forge-0.2.3+mc1.20.1.jar — официальный Forge-файл RyoamicLights переименуйте в это имя для development-сборки.
 
-Лицензии сохранены. Boss Scaling — форк sixik под LGPL v3 с изменениями
-justthekingg. У остальных модулей действуют собственные LICENSE.
-Старые относительные ссылки README на общие документы относятся к исходной
-структуре проекта:
-https://github.com/JustDudeIt123/DepthWard/tree/f98d06252834e364e125473ac76f9444a46c1a0b
+Сторонние JAR не включены. Проекты: https://www.curseforge.com/minecraft/mc-mods/curios и https://www.curseforge.com/minecraft/mc-mods/ryoamiclights. Обычная игровая установка не требует этих development-имён.
 
-Другие модули:
-- https://github.com/JustDudeIt123/depthward-stamina
-- https://github.com/JustDudeIt123/depthward-lanterns
-- https://github.com/JustDudeIt123/depthward-ghost-villagers
-- https://github.com/JustDudeIt123/depthward-mod-compat
-- https://github.com/JustDudeIt123/depthward-boss-scaling
+src/main — код/ресурсы, src/test — JUnit, src/gameTest — Forge GameTest. validation-tests содержит дополнительные standalone Java-проверки геометрии/фильтра изменений/контекста света. LanternOwnerLightTest требует игрового classpath и собранного JAR, остальные проверки геометрии/контекста можно компилировать вместе с соответствующими Java-классами без запуска Minecraft.
+
+При подготовке 20 ноября 2026 полная новая Gradle-сборка не завершилась из-за тайм-аута загрузки Gradle 8.8. Прямая полная javac-проверка по локальному remapped API-кэшу остановилась на закрытом BlockEntitySupplier: кэш не применяет все Forge access transformers и не заменяет нормальную ForgeGradle-сборку. Успешная проверка отдельных изменённых классов не является подтверждением полной пересборки проекта. Standalone клиент/сервер без Compat ещё не запускался.

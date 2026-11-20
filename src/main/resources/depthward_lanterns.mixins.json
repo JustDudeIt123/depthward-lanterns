@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "minVersion": "0.8.5",
+  "package": "dev.depthward.lanterns.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "depthward_lanterns.refmap.json",
+  "client": ["client.LightRadiusMixin", "client.ItemLightSourcesMixin", "client.EntityLightAccess", "client.EntityLightMixin"],
+  "injectors": {"defaultRequire": 1}
+}

@@ -13,10 +13,10 @@ public final class ClientEvents {
         event.enqueueWork(() -> {
             net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(Lanterns.BLOCK.get(),net.minecraft.client.renderer.RenderType.cutout());
             ItemProperties.register(Lanterns.LANTERN.get(), new ResourceLocation(Lanterns.ID,"empty"), (s,l,e,i) -> Fuel.lit(s) ? 0 : 1);
+            LanternCompat.installTracker(LightTracker::track);
             CuriosRendererRegistry.register(Lanterns.LANTERN.get(), BeltRenderer::new);
         });
     }
-    @SubscribeEvent public static void colors(net.minecraftforge.client.event.RegisterColorHandlersEvent.Item event) {
-        event.register((s,t) -> t == 0 ? 0xB58324 : 0xFFFFFF, Lanterns.OIL.get());
-    }
+    // No ItemColor callback: vanilla's default tint is white, preserving the
+    // glass/oil sprite without registering a redundant functional interface.
 }
